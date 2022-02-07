@@ -3,9 +3,11 @@ server:
 
 spring:
   application:
-    name: hrmis-registry
+    name: kgt-registry
 
 eureka:
+  dashboard:
+    path: /ui
   instance:
     prefer-ip-address: true
     non-secure-port: ${server.port}
