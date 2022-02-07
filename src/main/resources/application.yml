@@ -1,0 +1,16 @@
+server:
+  port: 8762
+
+spring:
+  application:
+    name: hrmis-registry
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    non-secure-port: ${server.port}
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
